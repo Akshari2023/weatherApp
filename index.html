@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="search-box">
+            <input type="text" id="city-input" placeholder="Enter city name">
+            <button id="search-btn"><i class="fas fa-search"></i></button>
+        </div>
+
+        <div class="weather-box">
+            <div class="weather-icon">
+                <i class="fas fa-cloud"></i>
+            </div>
+            <div class="temperature">
+                <span id="temp">--</span><span>°C</span>
+            </div>
+            <div class="description">
+                <span id="weather-desc">--</span>
+            </div>
+        </div>
+
+        <div class="weather-details">
+            <div class="humidity">
+                <i class="fas fa-tint"></i>
+                <div class="text">
+                    <span id="humidity-value">--</span>%
+                    <p>Humidity</p>
+                </div>
+            </div>
+            <div class="wind">
+                <i class="fas fa-wind"></i>
+                <div class="text">
+                    <span id="wind-speed">--</span> km/h
+                    <p>Wind Speed</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="error-message">
+            <p>City not found. Please try again.</p>
+        </div>
+    </div>
+
+    <script src="script.js"> 
+        const clientId = 'YOUR_CONSUMER_KEY';
+        const redirectUri = 'http://localhost:3000/callback';
+        const loginUrl = 'https://login.salesforce.com';
+    
+        document.getElementById('login-btn').addEventListener('click', () => {
+          const authUrl = `${loginUrl}/services/oauth2/authorize?response_type=token&client_id=${clientId}&redirect_uri=${redirectUri}`;
+          window.location.href = authUrl;
+        });
+      </script>
+</body>
+</html>

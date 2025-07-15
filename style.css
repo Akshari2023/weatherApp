@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #00feba, #5b548a);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 28px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.search-box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 15px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.search-box input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.search-box button {
+  width: 46px;
+  height: 46px;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 20px;
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+.search-box button:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.weather-box {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.weather-icon {
+  font-size: 80px;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.temperature {
+  font-size: 48px;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.description {
+  color: #fff;
+  font-size: 22px;
+  text-transform: capitalize;
+}
+
+.weather-details {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  padding: 20px 0;
+  border-top: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.humidity, .wind {
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.humidity i, .wind i {
+  font-size: 26px;
+  margin-right: 10px;
+}
+
+.text {
+  font-size: 16px;
+}
+
+.text span {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.error-message {
+  display: none;
+  text-align: center;
+  color: #fff;
+  background: rgba(255, 0, 0, 0.2);
+  padding: 12px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+      transform: scale(0.9);
+      opacity: 0;
+  }
+  to {
+      transform: scale(1);
+      opacity: 1;
+  }
+}
+
+.weather-box, .weather-details {
+  animation: fadeIn 0.5s ease-out;
+}
