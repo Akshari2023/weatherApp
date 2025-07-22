@@ -19,10 +19,3 @@ A responsive and lightweight weather application built using **HTML**, **CSS**, 
 - ⚙️ API integration using Fetch and async JavaScript
 
 ---
-
-## 🚀 How to Run Locally
-
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/yourusername/weather-app.git
-   cd weather-app
