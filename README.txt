@@ -1,15 +1,28 @@
-# 🌦️ Weather App - HTML, CSS, JavaScript
+# 🌦️ Weather App
 
-## 📋 Description:
-A simple weather app that lets you check the weather for any city using the OpenWeatherMap API.
+A responsive and lightweight weather application built using **HTML**, **CSS**, and **JavaScript**. It fetches real-time weather data using the **OpenWeatherMap API** and displays the temperature, weather condition, humidity, and more for any city.
 
-## 🚀 How to Run:
-1. Sign up at https://openweathermap.org/ to get your **free API key**.
-2. Replace `"YOUR_API_KEY"` in `script.js` with your actual API key.
-3. Open `index.html` in your browser.
-4. Enter a city name and click "Get Weather"!
+---
 
-## 🛠 Files Included:
-- `index.html` – Main HTML structure
-- `style.css` – Styling for the app
-- `script.js` – JavaScript logic and API integration
+## ✨ Screenshot
+
+![App Screenshot](./Demo.png)
+
+
+---
+
+## 📋 Features
+
+- 🌍 Search weather by city name
+- 🌡️ Displays temperature, humidity, wind speed, and conditions
+- 🎨 Simple and clean UI using CSS
+- ⚙️ API integration using Fetch and async JavaScript
+
+---
+
+## 🚀 How to Run Locally
+
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/yourusername/weather-app.git
+   cd weather-app
